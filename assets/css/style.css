@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-color {
+    background: #28A745;
+}
+
+.card {
+    width: 18rem;
+}
+
+#nuestras-propiedades {
+    height: auto;
+}
+
+.navbar-toggler {
+    filter: brightness(0) invert(1);
+}
+.card{
+    width: 90%;
+}
+.precios p{
+    display: inline;
+}
+.precios h4{
+    color: #28A745;
+    display: inline;
+}
+
+.card-body h3{
+    font-size: 1em;
+}
+.cheap-text{
+    font-size: 0.8em;
+}
+
+.formu-correo{
+    background-color: #28A745;
+}
+
+footer{
+    height: 118px;
+}
