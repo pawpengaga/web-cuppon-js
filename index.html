@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="https://developer.mozilla.org/favicon-48x48.cbbd161b.png">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg nav-color">
+    <nav class="navbar navbar-expand-lg nav-color py-3">
         <div class="container pe-4 ps-4">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo-white.png" alt="logo" height="37">
@@ -26,7 +27,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse me-3 me-lg-5" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link text-white ms-md-3" aria-current="page" href="#">Nosotros</a>
                     </li>
@@ -35,6 +36,81 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white ms-md-3" href="#">Contactanos</a>
+                    </li>
+                    <li class="submenu">
+                        <!-- icono del carrito -->
+                        <a href="#"><i id="carrito-icon" class="fa-solid fa-cart-shopping nav-link text-white ms-md-3 fs-2"></i></a>
+                        <!-- inicio del carrito -->
+                        <div id="carrito">
+                            <div class="contenido">
+                                <table id="lista-carrito" class="carrito-full-border">
+                                    <thead class="text-body-secondary">
+                                        <tr>
+                                            <th colspan="3">Últimos productos añadidos al carrito</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-body-secondary">
+                                        <!-- <tr>
+                                            <td><img src="assets/img/cupon-1.jpg" alt="hello"></td>
+                                            <td class="info-table-container" colspan="2">
+                                                <div>Gran y largo titulo de producto</div>
+                                                <div>
+                                                    <span class="cantidad">1 x</span>
+                                                    <span class="precio">$18.000</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2" class="text-center"><a href="#" class="delete-button"><i class="fa-solid fa-xmark"></i></a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/cupon-6.jpg" alt="hello"></td>
+                                            <td class="info-table-container" colspan="2">
+                                                <div id="dummy-text"></div>
+                                                <div>
+                                                    <span class="cantidad">1 x</span>
+                                                    <span class="precio">$55.000</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2" class="text-center"><a href="#" class="delete-button"><i class="fa-solid fa-xmark"></i></a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="assets/img/cupon-3.jpg" alt="hello"></td>
+                                            <td class="info-table-container" colspan="2">
+                                                <div>Otro titulo menos largo</div>
+                                                <div>
+                                                    <span class="cantidad">1 x</span>
+                                                    <span class="precio">$24.000</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2" class="text-center"><a href="#" class="delete-button"><i class="fa-solid fa-xmark"></i></a></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                                <table id="lista-carrito2" class="text-body-secondary carrito-full-border">
+                                    <tbody>
+                                        <!--Calculo de todo lo gastado-->
+                                        <!-- <tr class="text-end detalles-border">
+                                            <td class="detalles">Subtotal: </td>
+                                            <td class="detalles">&#160;</td>
+                                            <td class="detalles thevalue">$50.400</td>
+                                        </tr>
+                                        <tr class="text-end detalles-border">
+                                            <td class="detalles">Envío: </td>
+                                            <td class="detalles">&#160;</td>
+                                            <td class="detalles thevalue">$4.000</td>
+                                        </tr>
+                                        <tr class="text-end detalles-border">
+                                            <td class="detalles">Total: </td>
+                                            <td class="detalles">&#160;</td>
+                                            <td class="detalles thevalue">$300.000</td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="bottom-carrito"><a href="#" id="vaciar-carrito" class="btn btn-coupon w-100">Vaciar carrito</a></div>
+                        </div>
+                        <!-- Fin del carrito -->
                     </li>
                 </ul>
             </div>
@@ -46,99 +122,117 @@
 
         <h1 class="text-center titulo fw-medium mt-5 mb-5 text-body-secondary">¡Ofertas todos los días!</h1>
 
-        <div class="container">
+        <div class="container" id="lista-cursos">
             <div class="row px-0">
 
                 <div class="mb-5 col-xs-12 col-md-6 col-lg-4">
-                    <div class="card mx-auto">
+                    <div class="card mx-auto card-info" id="card-1">
                         <img src="assets/img/cupon-2.jpg" class="card-img-top" alt="cupon1">
                         <div class="card-body px-3">
                             <h2 class="card-title fw-light fs-4">Plumón Coral Fleece estampado en modelo y tamaño a elección</h2>
                             <h3 class="text-body-tertiary py-0 my-0 mb-1">Plumones Manolino</h3>
                             <p class="fw-light py-0 my-0 text-body-tertiary cheap-text mb-2"> <i class="fa-solid fa-location-dot"></i> 9191 Avenida Vitacura, Chile</p>
                             <hr class="py-0 my-0">
-                            <div class="text-end precios mt-3">
-                                <p class="fw-light text-body-tertiary">$45.990</p>
-                                <h4 class="fw-medium ms-2">$22.990</h4>
+                            <div class="text-end precios mt-3 d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-coupon-solid ms-0 agregar-carrito">Añadir<i class="fa-solid fa-cart-shopping text-white px-2 py-2 agregar-carrito"></i></a>
+                                <div>
+                                    <p class="fw-light text-body-tertiary">$45.990</p>
+                                    <h4 class="fw-medium ms-2">$22.990</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-5 col-xs-12 col-md-6 col-lg-4">
-                    <div class="card mx-auto">
+                    <div class="card mx-auto card-info" id="card-2">
                         <img src="assets/img/cupon-3.jpg" class="card-img-top" alt="cupon1">
                         <div class="card-body px-3">
                             <h2 class="card-title fw-light fs-4">Entrada para compartir + platos de fondo + postres + bebestibles</h2>
                             <h3 class="text-body-tertiary py-0 my-0 mb-1">V for Vegan</h3>
                             <p class="fw-light py-0 my-0 text-body-tertiary cheap-text mb-2"> <i class="fa-solid fa-location-dot"></i> 777 Jesse Pinkman, Chile</p>
                             <hr class="py-0 my-0">
-                            <div class="text-end precios mt-3">
-                                <p class="fw-light text-body-tertiary">$30.990</p>
-                                <h4 class="fw-medium ms-2">$12.990</h4>
+                            <div class="text-end precios mt-3 d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-coupon-solid ms-0 agregar-carrito">Añadir<i class="fa-solid fa-cart-shopping text-white px-2 py-2 agregar-carrito"></i></a>
+                                <div>
+                                    <p class="fw-light text-body-tertiary">$30.990</p>
+                                    <h4 class="fw-medium ms-2">$12.990</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-5 col-xs-12 col-md-6 col-lg-4">
-                    <div class="card mx-auto">
+                    <div class="card mx-auto card-info" id="card-3">
                         <img src="assets/img/cupon-4.jpg" class="card-img-top" alt="cupon1">
                         <div class="card-body px-3">
                             <h2 class="card-title fw-light fs-4">Evaluación integral + blanqueamiento dental led + limpieza + fluoración</h2>
                             <h3 class="text-body-tertiary py-0 my-0 mb-1">Clínica Dental Quijada</h3>
                             <p class="fw-light py-0 my-0 text-body-tertiary cheap-text mb-2"> <i class="fa-solid fa-location-dot"></i> 1342, Blanco Encalada, Chile</p>
                             <hr class="py-0 my-0">
-                            <div class="text-end precios mt-3">
-                                <p class="fw-light text-body-tertiary">$300.000</p>
-                                <h4 class="fw-medium ms-2">$25.990</h4>
+                            <div class="text-end precios mt-3 d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-coupon-solid ms-0 agregar-carrito">Añadir<i class="fa-solid fa-cart-shopping text-white px-2 py-2 agregar-carrito"></i></a>
+                                <div>
+                                    <p class="fw-light text-body-tertiary">$300.000</p>
+                                    <h4 class="fw-medium ms-2">$25.990</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-5 col-xs-12 col-md-6 col-lg-4">
-                    <div class="card mx-auto">
+                    <div class="card mx-auto card-info" id="card-4">
                         <img src="assets/img/cupon-5.jpg" class="card-img-top" alt="cupon1">
                         <div class="card-body px-3">
                             <h2 class="card-title fw-light fs-4">Colación para 2 personas + postre (no incluye bebidas)</h2>
                             <h3 class="text-body-tertiary py-0 my-0 mb-1">Suricata almacen</h3>
                             <p class="fw-light py-0 my-0 text-body-tertiary cheap-text mb-2"> <i class="fa-solid fa-location-dot"></i> 1071 Miguel Claro, Chile</p>
                             <hr class="py-0 my-0">
-                            <div class="text-end precios mt-3">
-                                <p class="fw-light text-body-tertiary">$4.200</p>
-                                <h4 class="fw-medium ms-2">$2.100</h4>
+                            <div class="text-end precios mt-3 d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-coupon-solid ms-0 agregar-carrito">Añadir<i class="fa-solid fa-cart-shopping text-white px-2 py-2 agregar-carrito"></i></a>
+                                <div>
+                                    <p class="fw-light text-body-tertiary">$4.200</p>
+                                    <h4 class="fw-medium ms-2">$2.100</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-5 col-xs-12 col-md-6 col-lg-4">
-                    <div class="card mx-auto">
+                    <div class="card mx-auto card-info" id="card-5">
                         <img src="assets/img/cupon-6.jpg" class="card-img-top" alt="cupon1">
                         <div class="card-body px-3">
                             <h2 class="card-title fw-light fs-4">1, 2 o 4 tickets para Stukids. Elige sucursal</h2>
                             <h3 class="text-body-tertiary py-0 my-0 mb-1">Stukids Centro de Eventos</h3>
                             <p class="fw-light py-0 my-0 text-body-tertiary cheap-text mb-2"> <i class="fa-solid fa-location-dot"></i> 133 El tranque, Chile</p>
                             <hr class="py-0 my-0">
-                            <div class="text-end precios mt-3">
-                                <p class="fw-light text-body-tertiary">$4.000</p>
-                                <h4 class="fw-medium ms-2">$2.500</h4>
+                            <div class="text-end precios mt-3 d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-coupon-solid ms-0 agregar-carrito">Añadir<i class="fa-solid fa-cart-shopping text-white px-2 py-2 agregar-carrito"></i></a>
+                                <div>
+                                    <p class="fw-light text-body-tertiary">$4.000</p>
+                                    <h4 class="fw-medium ms-2">$2.500</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-5 col-xs-12 col-md-6 col-lg-4">
-                    <div class="card mx-auto">
+                    <div class="card mx-auto card-info" id="card-6">
                         <img src="assets/img/cupon-1.jpg" class="card-img-top" alt="cupon1">
                         <div class="card-body px-3">
                             <h2 class="card-title fw-light fs-4">San Pedro de Atacama : 1 o 2 noches en alojamiento a elección</h2>
                             <h3 class="text-body-tertiary py-0 my-0 mb-1">D-Latam Travel</h3>
                             <hr class="py-0 my-0">
-                            <div class="text-end precios mt-3">
-                                <p class="fw-light text-body-tertiary">$80.200</p>
-                                <h4 class="fw-medium ms-2">$44.100</h4>
+                            <div class="text-end precios mt-3 d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-coupon-solid ms-0 agregar-carrito">Añadir<i class="fa-solid fa-cart-shopping text-white px-2 py-2 agregar-carrito"></i></a>
+                                <div>
+                                    <p class="fw-light text-body-tertiary">$80.200</p>
+                                    <h4 class="fw-medium ms-2">$44.100</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -187,6 +281,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

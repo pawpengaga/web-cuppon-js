@@ -1,0 +1,12 @@
+- Revisar el codigo html oculto en caso de dudas
+
+- La sección de las cards debe tener un id
+- Como práctica, debo incluir una clase especifica numerada a cada card
+
+Datos que necesito de los inputs a los que clasar
+- El precio
+- El nombre
+- La imagen
+
+Jerarquia:
+.card-info .card-body .precios

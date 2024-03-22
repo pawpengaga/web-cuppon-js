@@ -42,3 +42,137 @@ body {
 footer{
     height: 118px;
 }
+
+
+/******************************************/
+
+/* Carrito */
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+    opacity: 0;
+}
+
+.carrito-full-border{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contenido{
+    flex-grow: 1;
+}
+
+.submenu:hover #carrito{
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 0px);
+    right: calc(0% - 0px);
+    
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 150px;
+    min-width: 400px;
+
+    border-radius: 0.3rem;
+    outline: solid 1px rgba(128, 128, 128, 0.5);
+
+    opacity: 100;
+}
+
+.bottom-carrito{
+    margin-top: auto;
+}
+
+#lista-carrito thead, #lista-carrito2 thead {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    height: 30px;
+}
+
+#lista-carrito thead th, #lista-carrito2 thead th {
+    vertical-align: top;
+    line-height: 15px;
+}
+
+#lista-carrito tbody td, #lista-carrito2 tbody td{
+    height: 90px;
+}
+
+
+.btn-coupon{
+    color: #28A745;
+    border: 1px solid #28A745;
+}
+.btn-coupon:hover{
+    color: white;
+    background: #28A745;
+}
+
+.delete-button{
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.delete-button{
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    text-align: center;
+    padding: .3rem .55rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+.delete-button:hover{
+    background-color: rgb(189, 189, 189);
+    padding: .3rem .55rem;
+    border-radius: 50%;
+    color: whitesmoke;
+}
+
+#lista-carrito tbody tr td img{
+    max-width: 100px;
+}
+
+.info-table-container{
+    width: 55%;
+}
+
+.thevalue{
+    width: 5%;
+}
+
+.detalles{
+    height: 36px !important;
+}
+tr + tr, table + table{
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+tr.text-end.detalles-border td:first-child,
+tbody.text-body-secondary tr td.info-table-container div:last-child span:first-child{
+    font-weight: bold;
+}
+
+.btn-coupon-solid{
+    color: white;
+    background: #28A745;
+    border: 1px solid #29ac48;
+}
+.btn-coupon-solid:hover{
+    background: #1f943b;
+    color: white;
+}
+
+.btn-coupon-solid:focus, .btn-coupon:active{
+    border: 1px solid #29ac48;
+    color: white;
+    background: #3fc45e;
+}
