@@ -3,6 +3,7 @@
  * Hacer que el botón de X en los productos que tienen stack, solo reste 1 en lugar de borrarlos todos.
  * Hacer que solo aparezcan en el menú los últimos 3 elementos
  * Hacer que a pesar de la limitación anterior, los valores del array de objetos deben sumarse de forma íntegra
+ * Arreglar la limitación existente en los botones que traen íconos dentro: Que el mismo codigo funciona para cualquiera de ambos sin necesidad de un else if
  */
 
 //Declaraciones
@@ -11,6 +12,8 @@ const cartContainer = document.querySelector('#lista-carrito tbody')
 const priceCalculusContainer = document.querySelector('#lista-carrito2 tbody')
 const courseList = document.querySelector('#lista-cursos')
 const dumpCart = document.querySelector('#vaciar-carrito')
+
+const cartCounter = document.querySelector('#counter-cart')
 
 let cartArticles = []
 
@@ -68,6 +71,7 @@ function readCourseData(course){
         cartArticles = [...cartArticles, courseInfo]
     }
     
+    counterCart()
     // console.table(courseInfo)
     console.table(cartArticles)
     htmlCart()
@@ -77,6 +81,7 @@ function readCourseData(course){
 
 function htmlCart(){
     cleanHTML()
+    
 
     let subtotalPrice = 0
     
@@ -142,6 +147,7 @@ function htmlCart(){
 }
 
 function cleanHTML(){
+    counterCart()
     while(cartContainer.firstChild){
         cartContainer.removeChild(cartContainer.firstChild)
     }
@@ -171,5 +177,21 @@ function deleteCourse(event){
         const courseId = event.target.parentElement.getAttribute('data-id')
         cartArticles = cartArticles.filter ( course => course.id != courseId )
         htmlCart()
+    }
+}
+
+function counterCart(){
+    let cartArticleNumber = 0
+    cartArticles.forEach((article)=>{
+        const { quantity } = article
+        cartArticleNumber = cartArticleNumber + quantity
+        
+    })
+    if(cartArticles.length){
+        cartCounter.textContent = cartArticleNumber
+        cartCounter.classList.remove('disabler')
+    }else{
+        cartArticleNumber = 0
+        cartCounter.classList.add('disabler')
     }
 }

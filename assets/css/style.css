@@ -176,3 +176,22 @@ tbody.text-body-secondary tr td.info-table-container div:last-child span:first-c
     color: white;
     background: #3fc45e;
 }
+
+/*******************/
+
+#counter-cart{
+    color:white;
+    background-color: rgb(250, 70, 70);
+    padding: .1rem .6rem;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    right: -10px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.disabler{
+    display: none;
+}
